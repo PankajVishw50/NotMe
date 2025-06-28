@@ -1,0 +1,12 @@
+services:
+  backend:
+    image: notme-backend
+    build:
+      context: backend/
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - "./backend:/noteme-backend"
+    ports:
+      - "7900:7900"
+

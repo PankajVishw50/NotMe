@@ -1,0 +1,10 @@
+.env
+db.sqlite3
+__pycache__
+.venv/
+.coverage
+
+staticfiles/
+static/
+local/
+pyrightconfig.json
