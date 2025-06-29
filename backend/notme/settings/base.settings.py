@@ -1,9 +1,8 @@
-from pathlib import Path
-
 SECRET_KEY = NotImplemented
 DEBUG = False
-
 ALLOWED_HOSTS = []
+
+AUTH_USER_MODEL = "account.UserModel"
 
 
 INSTALLED_APPS = [
@@ -13,6 +12,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # My Apps
+    "account",
 ]
 
 MIDDLEWARE = [

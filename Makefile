@@ -3,7 +3,7 @@ prefix:
 	docker compose $(ARGS)
 
 up:
-	$(MAKE) prefix ARGS="up"
+	$(MAKE) prefix ARGS="up -d"
 	
 up-build:
 	$(MAKE) prefix ARGS="up --build -d"
@@ -15,7 +15,7 @@ down:
 	$(MAKE) prefix ARGS="down" 
 
 %-bash:
-	$(MAKE) prefix ARGS="$* bash"
+	$(MAKE) prefix ARGS="exec $* bash"
 
 logs:
 	$(MAKE) prefix ARGS="logs -f $(ARGS)"

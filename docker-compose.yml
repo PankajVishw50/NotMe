@@ -1,6 +1,7 @@
 services:
   backend:
     image: notme-backend
+    env_file: backend/dockerfile.env
     build:
       context: backend/
       dockerfile: Dockerfile
@@ -9,4 +10,9 @@ services:
       - "./backend:/noteme-backend"
     ports:
       - "7900:7900"
+
+
+
+
+
 
